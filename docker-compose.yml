@@ -4,9 +4,21 @@ services:
     build:
       context: .
       dockerfile: ./apps/api/Dockerfile
+    depends_on:
+      - db
     restart: always
     ports:
       - 4000:4000
+  db:
+    container_name: postgres
+    image: postgres
+    restart: always
+    ports:
+      - 5432:5432
+    env_file:
+      - ./.env
+    volumes:
+      - ./app_data:/var/lib/postgresql/data
   web:
     container_name: web
     build:
