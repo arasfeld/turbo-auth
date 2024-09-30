@@ -16,6 +16,7 @@ This Turborepo includes the following packages/apps:
 
 ### Apps and Packages
 
+- `api`: a [NestJS](https://nestjs.com/) server
 - `web`: a [Next.js](https://nextjs.org/) app
 - `@repo/ui`: a React component library
 - `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)

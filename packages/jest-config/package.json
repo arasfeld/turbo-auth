@@ -7,6 +7,7 @@
   },
   "files": [
     "base.js",
+    "nest.js",
     "next.js"
   ],
   "scripts": {
