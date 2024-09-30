@@ -9,7 +9,8 @@
     "test": "turbo test"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
+    "@repo/eslint-config": "workspace:*",
+    "prettier": "^3.3.3",
     "turbo": "^2.1.2",
     "typescript": "^5.4.5"
   },
