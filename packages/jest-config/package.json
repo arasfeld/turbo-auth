@@ -9,6 +9,9 @@
     "base.js",
     "next.js"
   ],
+  "scripts": {
+    "clean": "rm -rf node_modules"
+  },
   "devDependencies": {
     "jest": "^29.7.0",
     "next": "14.2.6"
