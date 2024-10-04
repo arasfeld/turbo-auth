@@ -1,29 +1,19 @@
 services:
   api:
-    container_name: api
+    extends:
+      file: ./apps/api/docker-compose.yml
+      service: api
     build:
       context: .
       dockerfile: ./apps/api/Dockerfile
-    depends_on:
-      - db
-    restart: always
-    ports:
-      - 4000:4000
   db:
-    container_name: postgres
-    image: postgres
-    restart: always
-    ports:
-      - 5432:5432
-    env_file:
-      - ./.env
-    volumes:
-      - ./app_data:/var/lib/postgresql/data
+    extends:
+      file: ./apps/api/docker-compose.yml
+      service: db
   web:
-    container_name: web
+    extends:
+      file: apps/web/docker-compose.yml
+      service: web
     build:
       context: .
       dockerfile: ./apps/web/Dockerfile
-    restart: always
-    ports:
-      - 3000:3000
